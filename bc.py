@@ -79,10 +79,13 @@ def register_node():
 
 @app.route('/test', methods=['POST', 'GET'])
 def test():
-    response = []
-    response.append(request.base_url)
-    response.append(request.url)
-    return jsonify(response), 200
+    response = request.data
+#    request.remote_addr
+#    response.append(request.base_url)
+#    response.append(request.url)
+#    response.append(request.headers['REMOTE_ADDR'])
+    #return jsonify({'ip': request.remote_addr},{'port': request.environ['REMOTE_PORT']}), 200
+    return str(request.environ), 200
 
 # Main program
 bc = Blockchain()

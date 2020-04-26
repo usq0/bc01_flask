@@ -17,4 +17,4 @@ RUN cd /app && \
 #EXPOSE 5000
 
 #CMD ["python", "./blockchain.py", "--port", "5000"]
-CMD ["python", "./bc00.py"]
+CMD ["python", "./bc.py"]

@@ -77,15 +77,31 @@ def register_node():
     netloc = parsed_url.netloc
     return netloc, 200
 
+@app.route('/ip', methods=['GET'])
+def httpconnection():
+    print(request.environ)
+    return jsonify(
+        {'URL': request.url},
+        {'client ip': request.remote_addr},
+        {'client port': request.environ['REMOTE_PORT']},
+        {'HTTP host': request.environ['HTTP_HOST']},
+        {'server name': request.environ['SERVER_NAME']},
+        {'server port': request.environ['SERVER_PORT']}
+        ), 200
+    return request.environ, 200
+
 @app.route('/test', methods=['POST', 'GET'])
 def test():
-    response = request.data
-#    request.remote_addr
-#    response.append(request.base_url)
-#    response.append(request.url)
-#    response.append(request.headers['REMOTE_ADDR'])
-    #return jsonify({'ip': request.remote_addr},{'port': request.environ['REMOTE_PORT']}), 200
-    return str(request.environ), 200
+    print(request.environ)
+    return jsonify(
+        {'URL': request.url},
+        {'client ip': request.remote_addr},
+        {'client port': request.environ['REMOTE_PORT']},
+        {'HTTP host': request.environ['HTTP_HOST']},
+        {'server name': request.environ['SERVER_NAME']},
+        {'server port': request.environ['SERVER_PORT']}
+        ), 200
+    return request.environ, 200
 
 # Main program
 bc = Blockchain()

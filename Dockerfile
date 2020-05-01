@@ -1,5 +1,9 @@
 FROM python:3
 
+MAINTAINER https://github.com/usq0/bc01_flask
+
+EXPOSE 5000
+
 WORKDIR /app
 
 COPY . .

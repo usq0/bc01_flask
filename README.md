@@ -15,7 +15,11 @@ Run additional servers on other ports:
 docker run -d -p 6667:5000 bc01_flask
 docker run -d -p 6668:5000 bc01_flask
 ```
-
+Use telnet or nc to check if the servers are running:
+```
+telnet 127.0.0.1 6666
+nc -vz 127.0.0.1 6666
+```
 ### ========== Remove containers and image, then reinstall =============
 ```
 docker container ls

@@ -8,7 +8,12 @@ cd docker
 git clone https://github.com/usq0/bc01_flask.git
 cd bc01_flask
 docker build -t bc01_flask .
-docker run -d -p 6666:5000 bc00
+docker run -d -p 6666:5000 bc01_flask
+```
+Run additional servers on other ports:
+```
+docker run -d -p 6667:5000 bc01_flask
+docker run -d -p 6668:5000 bc01_flask
 ```
 
 ### ========== Remove containers and image, then reinstall =============

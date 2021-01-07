@@ -10,7 +10,7 @@ import ast
 import random
 
 app = Flask(__name__)
-app.debug = False # Flask debug mode off
+app.debug = True # Flask debug mode on
 
 @app.route('/')
 def welcome():

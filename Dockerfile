@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6
 
 MAINTAINER https://github.com/usq0/bc01_flask
 

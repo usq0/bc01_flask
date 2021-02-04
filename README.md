@@ -8,12 +8,12 @@ cd docker
 git clone https://github.com/usq0/bc01_flask.git
 cd bc01_flask
 docker build -t bc01_flask .
-docker run -d -t -p 6666:5000 bc01_flask
+docker run -i -p 6666:5000 bc01_flask
 ```
 Run additional servers on other ports:
 ```
-docker run -d -t -p 6667:5000 bc01_flask
-docker run -d -t -p 6668:5000 bc01_flask
+docker run -d -p 6667:5000 bc01_flask
+docker run -d -p 6668:5000 bc01_flask
 ```
 Use telnet or nc to check if the servers are running:
 ```
@@ -31,7 +31,7 @@ rm -rf bc01_flask
 git clone https://github.com/usq0/bc01_flask.git
 cd bc01_flask
 docker build -t bc01_flask .
-docker run -d -t -p 6666:5000 bc01_flask
+docker run -d -p 6666:5000 bc01_flask
 ```
 
 ### =========== Test steps ===============

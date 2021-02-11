@@ -1,13 +1,12 @@
-from bccls00 import Blockchain
-from bccls00 import Block
-from urllib.parse import urlparse
-from flask import Flask, jsonify, request
-import time
-import datetime
-import json
-import requests
 import ast
+import datetime
 import random
+import time
+
+import requests
+from flask import Flask, jsonify, request
+
+from bccls00 import Blockchain
 
 app = Flask(__name__)
 app.debug = True # Flask debug mode on
